@@ -1,7 +1,3 @@
-provider "azurerm" {
-  features {}
-}
-
 resource "azurerm_virtual_network" "vnet_pipeline" {
   name                = "cr460_virtualnetwork"
   location            = "Canada Est"
