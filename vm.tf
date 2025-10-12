@@ -15,7 +15,7 @@ resource "azurerm_linux_virtual_machine" "vm_pipeline" {
   computer_name       = "cr460-vm"
   location            = azurerm_resource_group.rg_pipeline.location
   resource_group_name = azurerm_resource_group.rg_pipeline.name
-  size                = "Standard_B1s"
+  size                = "Standard_B1ls"
   admin_username      = "adminuser"
   network_interface_ids = [
     azurerm_network_interface.nic_pipeline.id
@@ -28,7 +28,7 @@ resource "azurerm_linux_virtual_machine" "vm_pipeline" {
 
   os_disk {
     caching              = "ReadWrite"
-    storage_account_type = "Standard_B1ls"
+    storage_account_type = "Standard_LRS"
   }
 
   source_image_reference {
