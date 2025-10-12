@@ -17,7 +17,7 @@ resource "azurerm_linux_virtual_machine" "vm_pipeline" {
   size                = "Standard_F2"
   admin_username      = "adminuser"
   network_interface_ids = [
-    azurerm_network_interface.example.id
+    azurerm_network_interface.nic_pipeline.id
   ]
 
   admin_password = "PasswordTest123*"
