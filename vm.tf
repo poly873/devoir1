@@ -15,7 +15,7 @@ resource "azurerm_linux_virtual_machine" "vm_pipeline" {
   computer_name       = "cr460-vm"
   location            = "Canada East"
   resource_group_name = azurerm_resource_group.rg_pipeline.name
-  size                = "Standard_B1ls"
+  size                = "Standard_B2s"
   admin_username      = "adminuser"
   network_interface_ids = [
     azurerm_network_interface.nic_pipeline.id
