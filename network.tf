@@ -1,6 +1,6 @@
 resource "azurerm_virtual_network" "vnet_pipeline" {
   name                = "cr460_virtualnetwork"
-  location            = "Canada Est"
+  location            = "Canada East"
   resource_group_name = azurerm_resource_group.rg_pipeline.name
   address_space       = ["10.0.0.0/16"]
 }
