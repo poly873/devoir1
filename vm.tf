@@ -12,6 +12,7 @@ resource "azurerm_network_interface" "nic_pipeline" {
 
 resource "azurerm_linux_virtual_machine" "vm_pipeline" {
   name                = "cr460_vm"
+  computer_name       = "cr460-vm"
   location            = azurerm_resource_group.rg_pipeline.location
   resource_group_name = azurerm_resource_group.rg_pipeline.name
   size                = "Standard_F2"
