@@ -28,7 +28,7 @@ resource "azurerm_linux_virtual_machine" "vm_pipeline" {
 
   os_disk {
     caching              = "ReadWrite"
-    storage_account_type = "Standard_LRS"
+    storage_account_type = "Standard_B1ls"
   }
 
   source_image_reference {
