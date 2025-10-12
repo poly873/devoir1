@@ -19,6 +19,6 @@ provider "azurerm" {
 }
 
 resource "azurerm_resource_group" "rg_pipeline" {
-  name     = "pipeline_ressourcegroup"
+  name     = "cr460_resourcegroup"
   location = "Canada East"
 }
