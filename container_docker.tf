@@ -7,22 +7,15 @@ resource "azurerm_container_group" "container_pipeline" {
   os_type             = "Linux"
 
   container {
-    name   = "hello-world"
-    image  = "mcr.microsoft.com/azuredocs/aci-helloworld:latest"
+    name   = "nginx-container"
+    image  = "nginx:latest"
     cpu    = "0.5"
     memory = "1.5"
 
     ports {
-      port     = 443
+      port     = 80
       protocol = "TCP"
     }
-  }
-
-  container {
-    name   = "sidecar"
-    image  = "mcr.microsoft.com/azuredocs/aci-tutorial-sidecar"
-    cpu    = "0.5"
-    memory = "1.5"
   }
 
   tags = {
